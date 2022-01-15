@@ -12,3 +12,27 @@ https://reactjs.org/docs/create-a-new-react-app.html
 PS C:\react> npx create-react-app feedback-app --use-npm
 
 PS C:\react\feedback-app> npm start
+
+---------------
+
+Incorrect:      <div class='container'>
+Correct:        <div className='container'>
+
+Incorrect:       <label for=''></label>
+Correct:         <label htmlFor=''></label>
+
+---------------
+
+JSX:
+  return (
+    <div className='container'>
+      <h1>My App</h1>
+    </div>
+  );
+is the same as:
+Javascript:
+  return React.createElement(
+    'div',
+    { className: 'container' },
+    React.createElement('h1', {}, 'My App')
+  );
