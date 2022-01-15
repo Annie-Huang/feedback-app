@@ -36,3 +36,20 @@ Javascript:
     { className: 'container' },
     React.createElement('h1', {}, 'My App')
   );
+
+---------------
+
+If you want to access to the previous value:
+    setRating(10);
+to
+    setRating((prev) => {
+      console.log(prev);
+      return prev + 1;
+    });
+
+---------------
+---------------
+---------------
+---------------
+---------------
+---------------
