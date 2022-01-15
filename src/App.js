@@ -4,7 +4,7 @@ import Header from './components/Header';
 const App = () => {
   return (
     <>
-      <Header />
+      <Header bgColor='red' textColor='blue' />
       <div className='container'>
         <h1>My App</h1>
       </div>
