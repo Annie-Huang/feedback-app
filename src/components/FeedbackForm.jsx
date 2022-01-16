@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from './shared/Card';
 
 const FeedbackForm = () => {
+  const [text, setText] = useState('');
+
+  const handleTextChange = (e) => {
+    // console.log(e.target.value);
+    setText(e.target.value);
+  };
+
   return (
     <Card>
       <form action=''>
@@ -9,7 +16,14 @@ const FeedbackForm = () => {
 
         {/* TODO - rating select component */}
         <div className='input-group'>
-          <input type='text' name='' id='' placeholder='Write a review' />
+          <input
+            onChange={handleTextChange}
+            type='text'
+            name=''
+            id=''
+            placeholder='Write a review'
+            value={text}
+          />
           <button type='submit'>Send</button>
         </div>
       </form>
