@@ -15,6 +15,9 @@ PS C:\react\feedback-app> npm i uuid
 PS C:\react\feedback-app> npm i framer-motion@4.1.17
 PS C:\react\feedback-app> npm i react-router-dom
 
+http://localhost:3000/
+http://localhost:3000/about
+
 ---------------
 
 Incorrect:      <div class='container'>
