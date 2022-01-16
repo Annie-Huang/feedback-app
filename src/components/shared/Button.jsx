@@ -9,7 +9,7 @@ const Button = ({ children, version, type, isDisabled }) => {
   );
 };
 
-Button.propTypes = {
+Button.defaultProps = {
   version: 'primary',
   type: 'button',
   isDisabled: false,
