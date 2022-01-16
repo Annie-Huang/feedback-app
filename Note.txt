@@ -79,6 +79,7 @@ Browser Router uses the HTML5 history API to keep our user interface in sync wit
 Hash router uses the hash portion of the URL to keep it in sync
 (e.g http://localhost:3000/#about)
 
+Use <Link> instead of <a> so the page will not be refreshed when we land on the page.
 
 ---------------
 ---------------
