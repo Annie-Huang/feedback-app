@@ -81,6 +81,21 @@ Hash router uses the hash portion of the URL to keep it in sync
 
 Use <Link> instead of <a> so the page will not be refreshed when we land on the page.
 
+      <Link to='about'>
+        <FaQuestion size={30} />
+      </Link>
+
+      <Link to={{ pathname: '/about', search: '?sort=name' }}>
+        <FaQuestion size={30} />
+      </Link>
+      Will go to http://localhost:3000/about?sort=name
+
+      <Link to={{ pathname: '/about', search: '?sort=name', hash: '#hello' }}>
+        <FaQuestion size={30} />
+      </Link>
+      Will go to http://localhost:3000/about?sort=name#hello
+
+
 ---------------
 ---------------
 ---------------
