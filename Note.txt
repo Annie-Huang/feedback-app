@@ -69,6 +69,14 @@ Card.propTypes = {
 
 
 ---------------
+Router:
+Browser Router uses the HTML5 history API to keep our user interface in sync with URL.
+(e.g http://localhost:3000/about)
+
+Hash router uses the hash portion of the URL to keep it in sync
+(e.g http://localhost:3000/#about)
+
+
 ---------------
 ---------------
 ---------------
