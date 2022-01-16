@@ -95,6 +95,19 @@ Use <Link> instead of <a> so the page will not be refreshed when we land on the 
       </Link>
       Will go to http://localhost:3000/about?sort=name#hello
 
+---------------
+Get param value from router:
+
+      http://localhost:3000/post/200
+      <Route path='/post/:id/:name' element={<Post />} />
+      const params = useParams();
+      return <div>POST {params.id}</div>;
+
+      http://localhost:3000/post/2000/brad
+      <Route path='/post/:id/:name' element={<Post />} />
+      const params = useParams();
+      <h1>POST {params.id}</h1>
+      <p>Name: {params.name}</p>
 
 ---------------
 ---------------
