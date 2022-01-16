@@ -11,6 +11,7 @@ https://reactjs.org/docs/create-a-new-react-app.html
 ========================================================================
 PS C:\react> npx create-react-app feedback-app --use-npm
 PS C:\react\feedback-app> npm i react-icons
+PS C:\react\feedback-app> npm i uuid
 
 PS C:\react\feedback-app> npm start
 
