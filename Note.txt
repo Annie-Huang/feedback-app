@@ -48,6 +48,24 @@ to
     });
 
 ---------------
+
+This is strange:
+Card.propTypes = {
+  children: PropTypes.node.isRequired,
+  reverse: PropTypes.bool,          <<< why not boolean. But I generally use typescript rather than proptypes
+};
+
+  item: PropTypes.object.isRequired,
+
+  feedback: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      text: PropTypes.string.isRequired,
+      rating: PropTypes.number.isRequired,
+    })
+  ),
+
+
 ---------------
 ---------------
 ---------------
