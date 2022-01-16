@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { useState } from 'react';
 import Header from './components/Header';
 import FeedbackData from './data/FeedbackData';
 import FeedbackList from './components/FeedbackList';
@@ -8,7 +9,10 @@ import FeedbackForm from './components/FeedbackForm';
 const App = () => {
   const [feedback, setFeedback] = useState(FeedbackData);
 
-  const addFeedback = (newFeedback) => {};
+  const addFeedback = (newFeedback) => {
+    newFeedback.id = uuidv4();
+    setFeedback([newFeedback, ...feedback]);
+  };
 
   // sort of prop drilling...
   const deleteFeedback = (id) => {
