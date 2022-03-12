@@ -15,6 +15,7 @@ import FeedbackForm from './components/FeedbackForm';
 import AboutPage from './pages/AboutPage';
 import AboutIconLink from './components/AboutIconLink';
 import Post from './components/Post';
+import { FeedbackProvider } from './context/FeedbackContext';
 
 const App = () => {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -32,43 +33,45 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <Header />
-      <div className='container'>
-        <Routes>
-          <Route
-            exact
-            path='/'
-            element={
-              <>
-                <FeedbackForm handleAdd={addFeedback} />
-                <FeedbackStats feedback={feedback} />
-                <FeedbackList
-                  feedback={feedback}
-                  handleDelete={deleteFeedback}
-                />
-              </>
-            }
-          ></Route>
+    <FeedbackProvider>
+      <Router>
+        <Header />
+        <div className='container'>
+          <Routes>
+            <Route
+              exact
+              path='/'
+              element={
+                <>
+                  <FeedbackForm handleAdd={addFeedback} />
+                  <FeedbackStats feedback={feedback} />
+                  <FeedbackList
+                    feedback={feedback}
+                    handleDelete={deleteFeedback}
+                  />
+                </>
+              }
+            ></Route>
 
-          <Route path='/about' element={<AboutPage />} />
-          {/*<Route path='/post/:id/:name' element={<Post />} />*/}
-          {/*<Route path='/post' element={<Post />} />*/}
-          <Route path='/post/*' element={<Post />} />
-        </Routes>
+            <Route path='/about' element={<AboutPage />} />
+            {/*<Route path='/post/:id/:name' element={<Post />} />*/}
+            {/*<Route path='/post' element={<Post />} />*/}
+            <Route path='/post/*' element={<Post />} />
+          </Routes>
 
-        {/*<Card>*/}
-        {/*  <NavLink to='/' activeClassName='active'>*/}
-        {/*    Home*/}
-        {/*  </NavLink>*/}
-        {/*  <NavLink to='/about' activeClassName='active'>*/}
-        {/*    About*/}
-        {/*  </NavLink>*/}
-        {/*</Card>*/}
+          {/*<Card>*/}
+          {/*  <NavLink to='/' activeClassName='active'>*/}
+          {/*    Home*/}
+          {/*  </NavLink>*/}
+          {/*  <NavLink to='/about' activeClassName='active'>*/}
+          {/*    About*/}
+          {/*  </NavLink>*/}
+          {/*</Card>*/}
 
-        <AboutIconLink />
-      </div>
-    </Router>
+          <AboutIconLink />
+        </div>
+      </Router>
+    </FeedbackProvider>
   );
 };
 
