@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 /*const Post = () => {
   const params = useParams();
@@ -14,7 +14,14 @@ import { Navigate } from 'react-router-dom';
 };*/
 
 const Post = () => {
-  const status = 404;
+  const status = 200;
+
+  const navigate = useNavigate();
+
+  const onClick = () => {
+    console.log('Hello');
+    navigate('/about');
+  };
 
   if (status === 404) {
     return <Navigate to='/notfound' />;
@@ -23,6 +30,7 @@ const Post = () => {
   return (
     <div>
       <h1>POST</h1>
+      <button onClick={onClick}>Click</button>
     </div>
   );
 };

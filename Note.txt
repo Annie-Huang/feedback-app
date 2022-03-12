@@ -7,6 +7,7 @@ https://github.com/bradtraversy/house-marketplace
 https://gist.github.com/bradtraversy
 
 https://reactjs.org/docs/create-a-new-react-app.html
+https://reactrouter.com/docs/en/v6/api
 
 ========================================================================
 PS C:\react> npx create-react-app feedback-app --use-npm
@@ -119,9 +120,18 @@ Get param value from router:
 
 ---------------
 <Navigate> is like <Redirect> in react-router-dom v5.
+
+Navigation when state change:
   if (status === 404) {
     return <Navigate to='/notfound' />;
   }
+
+Navigation on button click:
+  const navigate = useNavigate();
+  const onClick = () => {
+    console.log('Hello');
+    navigate('/about');
+  };
 
 
 ---------------
