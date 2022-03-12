@@ -1,5 +1,11 @@
 import { v4 as uuidv4 } from 'uuid';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  NavLink,
+} from 'react-router-dom';
+import Card from './components/shared/Card';
 import { useState } from 'react';
 import Header from './components/Header';
 import FeedbackData from './data/FeedbackData';
@@ -48,6 +54,15 @@ const App = () => {
           <Route path='/about' element={<AboutPage />} />
           <Route path='/post/:id/:name' element={<Post />} />
         </Routes>
+
+        <Card>
+          <NavLink to='/' activeClassName='active'>
+            Home
+          </NavLink>
+          <NavLink to='/about' activeClassName='active'>
+            About
+          </NavLink>
+        </Card>
 
         <AboutIconLink />
       </div>
