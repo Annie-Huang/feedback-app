@@ -52,17 +52,18 @@ const App = () => {
           ></Route>
 
           <Route path='/about' element={<AboutPage />} />
-          <Route path='/post/:id/:name' element={<Post />} />
+          {/*<Route path='/post/:id/:name' element={<Post />} />*/}
+          <Route path='/post' element={<Post />} />
         </Routes>
 
-        <Card>
-          <NavLink to='/' activeClassName='active'>
-            Home
-          </NavLink>
-          <NavLink to='/about' activeClassName='active'>
-            About
-          </NavLink>
-        </Card>
+        {/*<Card>*/}
+        {/*  <NavLink to='/' activeClassName='active'>*/}
+        {/*    Home*/}
+        {/*  </NavLink>*/}
+        {/*  <NavLink to='/about' activeClassName='active'>*/}
+        {/*    About*/}
+        {/*  </NavLink>*/}
+        {/*</Card>*/}
 
         <AboutIconLink />
       </div>

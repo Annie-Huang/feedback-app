@@ -17,6 +17,7 @@ PS C:\react\feedback-app> npm i react-router-dom
 
 http://localhost:3000/
 http://localhost:3000/about
+http://localhost:3000/post/1/abc
 
 ---------------
 
@@ -96,6 +97,13 @@ Use <Link> instead of <a> so the page will not be refreshed when we land on the 
       Will go to http://localhost:3000/about?sort=name#hello
 
 ---------------
+<NavLink> syntax:
+
+          <NavLink to='/' activeClassName='active'>
+            Home
+          </NavLink>
+
+---------------
 Get param value from router:
 
       http://localhost:3000/post/200
@@ -110,6 +118,12 @@ Get param value from router:
       <p>Name: {params.name}</p>
 
 ---------------
+<Navigate> is like <Redirect> in react-router-dom v5.
+  if (status === 404) {
+    return <Navigate to='/notfound' />;
+  }
+
+
 ---------------
 ---------------
 ---------------
