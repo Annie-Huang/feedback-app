@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate, Routes, Route } from 'react-router-dom';
 
 /*const Post = () => {
   const params = useParams();
@@ -31,6 +31,9 @@ const Post = () => {
     <div>
       <h1>POST</h1>
       <button onClick={onClick}>Click</button>
+      <Routes>
+        <Route path='/show' element={<h1>Hello World</h1>} />
+      </Routes>
     </div>
   );
 };

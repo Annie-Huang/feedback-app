@@ -135,5 +135,10 @@ Navigation on button click:
 
 
 ---------------
+Only show specific component if the router contains certain path  <<< this can also be done with a if conditional check, right?
+      <Routes>
+        <Route path='/show' element={<h1>Hello World</h1>} />
+      </Routes>
+
 ---------------
 ---------------
