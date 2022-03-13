@@ -157,3 +157,5 @@ Http status codes:
 
 
 ---------------
+!!!! How to set proxy in react app:
+  "proxy": "http://localhost:5000",
