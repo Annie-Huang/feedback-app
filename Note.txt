@@ -16,6 +16,8 @@ PS C:\react\feedback-app> npm i uuid
 PS C:\react\feedback-app> npm i framer-motion@4.1.17
 PS C:\react\feedback-app> npm i react-router-dom
 
+PS C:\react\feedback-app> npm run build
+
 http://localhost:3000/
 http://localhost:3000/about
 http://localhost:3000/post/1/abc
@@ -141,4 +143,13 @@ Only show specific component if the router contains certain path  <<< this can a
       </Routes>
 
 ---------------
+Http status codes:
+
+1xx: Informational. Request received / processing
+2xx: Success. Successfully received
+3xx: Redirect. Further action must be taken / redirect
+4xx: Client Error. Request does not have what it needs.
+5xx: Server Error. Server failed to fulfill a valid request.
+
+
 ---------------
