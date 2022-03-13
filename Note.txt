@@ -8,6 +8,7 @@ https://gist.github.com/bradtraversy
 
 https://reactjs.org/docs/create-a-new-react-app.html
 https://reactrouter.com/docs/en/v6/api
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
 ========================================================================
 PS C:\react> npx create-react-app feedback-app --use-npm
@@ -159,3 +160,21 @@ Http status codes:
 ---------------
 !!!! How to set proxy in react app:
   "proxy": "http://localhost:5000",
+
+---------------
+Fetch api calls:
+    const response = await fetch('/feedback', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newFeedback),
+    });
+
+    const data = await response.json();
+
+
+---------------
+---------------
+---------------
+---------------
