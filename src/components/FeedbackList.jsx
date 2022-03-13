@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useContext } from 'react';
 import FeedbackItem from './FeedbackItem';
 import FeedbackContext from '../context/FeedbackContext';
+import Spinner from './shared/Spinner';
 
 const FeedbackList = () => {
   const { feedback, isLoading } = useContext(FeedbackContext);
@@ -21,7 +22,7 @@ const FeedbackList = () => {
 
   // Animation is available for both add and remove a card.
   return isLoading ? (
-    <h3>Loading...</h3>
+    <Spinner />
   ) : (
     <div className='feedback-list'>
       <AnimatePresence>
