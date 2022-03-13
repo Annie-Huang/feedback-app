@@ -38,7 +38,7 @@ const App = () => {
                 <>
                   <FeedbackForm handleAdd={addFeedback} />
                   <FeedbackStats />
-                  <FeedbackList handleDelete={deleteFeedback} />
+                  <FeedbackList />
                 </>
               }
             ></Route>
