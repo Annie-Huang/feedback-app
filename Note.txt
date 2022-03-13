@@ -16,11 +16,13 @@ PS C:\react\feedback-app> npm i uuid
 PS C:\react\feedback-app> npm i framer-motion@4.1.17
 PS C:\react\feedback-app> npm i react-router-dom
 
-PS C:\react\feedback-app> npm run build
-
 http://localhost:3000/
 http://localhost:3000/about
 http://localhost:3000/post/1/abc
+
+PS C:\react\feedback-app> npm run build
+In postman:
+http://localhost:5000/feedback
 
 ---------------
 
