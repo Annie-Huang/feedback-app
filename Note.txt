@@ -24,6 +24,8 @@ PS C:\react\feedback-app> npm run build
 In postman:
 http://localhost:5000/feedback
 
+PS C:\react\feedback-app> npm run dev
+
 ---------------
 
 Incorrect:      <div class='container'>
