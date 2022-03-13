@@ -173,9 +173,23 @@ Fetch api calls:
 
     const data = await response.json();
 
+   ------------
+
       await fetch(`/feedback/${id}`, {
         method: 'DELETE',
       });
+
+   ------------
+
+    const response = await fetch(`/feedback/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(updItem),
+    });
+
+    const data = await response.json();
 
 ---------------
 ---------------
