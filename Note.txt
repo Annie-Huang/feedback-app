@@ -10,7 +10,10 @@ https://reactjs.org/docs/create-a-new-react-app.html
 https://reactrouter.com/docs/en/v6/api
 https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
+This project is Part 1
 Part 2 is at: C:\react\github-finder
+Part 3 is at C:\react\react-sandbox
+Part 4 is at C:\react\house-marketplace
 
 ========================================================================
 PS C:\react> npx create-react-app feedback-app --use-npm
